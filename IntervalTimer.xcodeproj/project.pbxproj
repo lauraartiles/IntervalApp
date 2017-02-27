@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		D36F82991E638FF90032CE0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F82981E638FF90032CE0F /* AppDelegate.swift */; };
-		D36F829B1E638FF90032CE0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F829A1E638FF90032CE0F /* ViewController.swift */; };
+		D36F829B1E638FF90032CE0F /* CreateWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F829A1E638FF90032CE0F /* CreateWorkoutViewController.swift */; };
 		D36F829E1E638FF90032CE0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36F829C1E638FF90032CE0F /* Main.storyboard */; };
 		D36F82A01E638FF90032CE0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36F829F1E638FF90032CE0F /* Assets.xcassets */; };
 		D36F82A31E638FF90032CE0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36F82A11E638FF90032CE0F /* LaunchScreen.storyboard */; };
+		D36F82AB1E63AEE50032CE0F /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F82AA1E63AEE50032CE0F /* WorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D36F82951E638FF80032CE0F /* IntervalTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntervalTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36F82981E638FF90032CE0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D36F829A1E638FF90032CE0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D36F829A1E638FF90032CE0F /* CreateWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutViewController.swift; sourceTree = "<group>"; };
 		D36F829D1E638FF90032CE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D36F829F1E638FF90032CE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D36F82A21E638FF90032CE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36F82A41E638FF90032CE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D36F82AA1E63AEE50032CE0F /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				D36F82981E638FF90032CE0F /* AppDelegate.swift */,
-				D36F829A1E638FF90032CE0F /* ViewController.swift */,
+				D36F829A1E638FF90032CE0F /* CreateWorkoutViewController.swift */,
 				D36F829C1E638FF90032CE0F /* Main.storyboard */,
 				D36F829F1E638FF90032CE0F /* Assets.xcassets */,
 				D36F82A11E638FF90032CE0F /* LaunchScreen.storyboard */,
 				D36F82A41E638FF90032CE0F /* Info.plist */,
+				D36F82AA1E63AEE50032CE0F /* WorkoutViewController.swift */,
 			);
 			path = IntervalTimer;
 			sourceTree = "<group>";
@@ -96,7 +99,7 @@
 				TargetAttributes = {
 					D36F82941E638FF80032CE0F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9ZE33R343G;
+						DevelopmentTeam = WUW558DRD5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36F829B1E638FF90032CE0F /* ViewController.swift in Sources */,
+				D36F82AB1E63AEE50032CE0F /* WorkoutViewController.swift in Sources */,
+				D36F829B1E638FF90032CE0F /* CreateWorkoutViewController.swift in Sources */,
 				D36F82991E638FF90032CE0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9ZE33R343G;
+				DEVELOPMENT_TEAM = WUW558DRD5;
 				INFOPLIST_FILE = IntervalTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lauraartiles.IntervalTimer;
@@ -272,7 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9ZE33R343G;
+				DEVELOPMENT_TEAM = WUW558DRD5;
 				INFOPLIST_FILE = IntervalTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lauraartiles.IntervalTimer;

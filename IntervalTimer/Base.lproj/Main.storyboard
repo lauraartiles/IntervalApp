@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0lg-aK-XQN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Create Workout View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreateWorkoutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +23,100 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="273" placeholderIntrinsicHeight="60" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Workout Title" placeholder="Workout Title" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZlH-KA-3R2">
+                                <rect key="frame" x="0.0" y="125" width="375" height="60"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ytN-ZJ-twX">
+                                <rect key="frame" x="127" y="47" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="Zlc-wF-Rju"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Time"/>
+                                    <segment title="Distance"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZlH-KA-3R2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MDj-f7-Exf"/>
+                            <constraint firstItem="ytN-ZJ-twX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="NI2-Mq-z3e"/>
+                            <constraint firstItem="ZlH-KA-3R2" firstAttribute="top" secondItem="ytN-ZJ-twX" secondAttribute="bottom" constant="50" id="QX3-Zo-k7B"/>
+                            <constraint firstAttribute="trailing" secondItem="ZlH-KA-3R2" secondAttribute="trailing" id="VC6-yo-RKj"/>
+                            <constraint firstItem="ZlH-KA-3R2" firstAttribute="centerX" secondItem="ytN-ZJ-twX" secondAttribute="centerX" id="olr-Xs-skL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-127" y="30"/>
+        </scene>
+        <!--Workout View Controller-->
+        <scene sceneID="ajN-RC-ioC">
+            <objects>
+                <viewController id="0lg-aK-XQN" customClass="WorkoutViewController" customModule="IntervalTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Th5-Ug-DrV"/>
+                        <viewControllerLayoutGuide type="bottom" id="EVX-gp-Tka"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xfn-65-Rz0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Iy-xN-JQh">
+                                <rect key="frame" x="0.0" y="127" width="375" height="89"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugU-jR-v6T">
+                                <rect key="frame" x="80" y="266" width="100" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ibu-G1-gFP"/>
+                                    <constraint firstAttribute="height" constant="58" id="ix0-AB-wCf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="0lg-aK-XQN" eventType="touchUpInside" id="1lU-89-Pwx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qC-Zq-XOc">
+                                <rect key="frame" x="195" y="266" width="100" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopTimer:" destination="0lg-aK-XQN" eventType="touchUpInside" id="NrD-aw-yNg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ugU-jR-v6T" firstAttribute="top" secondItem="8qC-Zq-XOc" secondAttribute="top" id="6r3-pZ-tuc"/>
+                            <constraint firstItem="3Iy-xN-JQh" firstAttribute="top" secondItem="Th5-Ug-DrV" secondAttribute="bottom" constant="107" id="7Z9-oj-M3M"/>
+                            <constraint firstItem="ugU-jR-v6T" firstAttribute="leading" secondItem="Xfn-65-Rz0" secondAttribute="leadingMargin" constant="64" id="9bM-hm-d8e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8qC-Zq-XOc" secondAttribute="trailing" constant="64" id="ADR-Zn-N7K"/>
+                            <constraint firstItem="8qC-Zq-XOc" firstAttribute="leading" secondItem="ugU-jR-v6T" secondAttribute="trailing" constant="15" id="NKr-rL-Yhb"/>
+                            <constraint firstItem="ugU-jR-v6T" firstAttribute="baseline" secondItem="8qC-Zq-XOc" secondAttribute="firstBaseline" id="Vdu-4i-jD2"/>
+                            <constraint firstAttribute="trailing" secondItem="3Iy-xN-JQh" secondAttribute="trailing" id="ZeL-MX-0sU"/>
+                            <constraint firstItem="ugU-jR-v6T" firstAttribute="top" secondItem="3Iy-xN-JQh" secondAttribute="bottom" constant="50" id="dpE-oF-GLJ"/>
+                            <constraint firstItem="8qC-Zq-XOc" firstAttribute="baseline" secondItem="ugU-jR-v6T" secondAttribute="firstBaseline" id="s17-H9-mei"/>
+                            <constraint firstItem="EVX-gp-Tka" firstAttribute="top" secondItem="ugU-jR-v6T" secondAttribute="bottom" constant="343" id="szK-0Y-fzc"/>
+                            <constraint firstItem="3Iy-xN-JQh" firstAttribute="leading" secondItem="Xfn-65-Rz0" secondAttribute="leading" id="wRL-yT-IuK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startAndResetButton" destination="ugU-jR-v6T" id="msA-8d-I7e"/>
+                        <outlet property="timeLabel" destination="3Iy-xN-JQh" id="GC3-p8-b7J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yo-jE-B3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>
