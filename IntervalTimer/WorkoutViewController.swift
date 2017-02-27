@@ -11,15 +11,26 @@ import Foundation
 
 class WorkoutViewController: UIViewController {
     var timer = Timer()
-    var counter = 0
+    var elapsedTime = 0
     var timerDidStart = false
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var startAndResetButton: UIButton!
     
+    @IBOutlet weak var stopButton: UIButton!
     @IBAction func startTimer(_ sender: UIButton) {
-        startAndResetButton.titleLabel?.text = "Reset"
-        timer = Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(WorkoutViewController.updateTimeLabel), userInfo: nil, repeats: true)
-        timerDidStart = true
+        if timerDidStart {
+            timer.invalidate()
+            timeLabel.text = "00:00"
+            elapsedTime = 0
+            timerDidStart = false
+            startAndResetButton.setTitle("Start", for: .normal)
+        }
+        else {
+            startAndResetButton.setTitle("Reset", for: .normal)
+            timer = Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(WorkoutViewController.updateTimeLabel), userInfo: nil, repeats: true)
+            timerDidStart = true
+        }
+        
         
     }
     @IBAction func stopTimer(_ sender: UIButton) {
@@ -27,6 +38,8 @@ class WorkoutViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        startAndResetButton.layer.cornerRadius = 5
+        stopButton.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
     }
@@ -37,10 +50,10 @@ class WorkoutViewController: UIViewController {
     }
     
     func updateTimeLabel() {
-        let minutes = Int(counter / 60)
-        let seconds =  counter - minutes * 60
+        let minutes = Int(elapsedTime / 60)
+        let seconds =  elapsedTime - minutes * 60
         timeLabel.text = String(format:"%02i:%02i",minutes,Int(seconds))
-        counter += 1
+        elapsedTime += 1
     }
     
 

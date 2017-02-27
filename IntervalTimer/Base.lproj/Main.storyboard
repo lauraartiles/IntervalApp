@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,27 +66,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Iy-xN-JQh">
-                                <rect key="frame" x="0.0" y="127" width="375" height="89"/>
+                                <rect key="frame" x="0.0" y="127" width="375" height="120"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugU-jR-v6T">
-                                <rect key="frame" x="80" y="266" width="100" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugU-jR-v6T">
+                                <rect key="frame" x="65" y="294" width="100" height="67"/>
+                                <color key="backgroundColor" red="0.57550816329999999" green="0.86608311520000003" blue="0.4382630247" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Ibu-G1-gFP"/>
-                                    <constraint firstAttribute="height" constant="58" id="ix0-AB-wCf"/>
+                                    <constraint firstAttribute="width" constant="100" id="Tm6-kW-OMT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="startTimer:" destination="0lg-aK-XQN" eventType="touchUpInside" id="1lU-89-Pwx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qC-Zq-XOc">
-                                <rect key="frame" x="195" y="266" width="100" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qC-Zq-XOc">
+                                <rect key="frame" x="200" y="294" width="100" height="67"/>
+                                <color key="backgroundColor" red="0.84605368589999996" green="0.27163633440000001" blue="0.2985964774" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Stop"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="stopTimer:" destination="0lg-aK-XQN" eventType="touchUpInside" id="NrD-aw-yNg"/>
                                 </connections>
@@ -96,21 +99,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ugU-jR-v6T" firstAttribute="top" secondItem="8qC-Zq-XOc" secondAttribute="top" id="6r3-pZ-tuc"/>
-                            <constraint firstItem="3Iy-xN-JQh" firstAttribute="top" secondItem="Th5-Ug-DrV" secondAttribute="bottom" constant="107" id="7Z9-oj-M3M"/>
-                            <constraint firstItem="ugU-jR-v6T" firstAttribute="leading" secondItem="Xfn-65-Rz0" secondAttribute="leadingMargin" constant="64" id="9bM-hm-d8e"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8qC-Zq-XOc" secondAttribute="trailing" constant="64" id="ADR-Zn-N7K"/>
-                            <constraint firstItem="8qC-Zq-XOc" firstAttribute="leading" secondItem="ugU-jR-v6T" secondAttribute="trailing" constant="15" id="NKr-rL-Yhb"/>
-                            <constraint firstItem="ugU-jR-v6T" firstAttribute="baseline" secondItem="8qC-Zq-XOc" secondAttribute="firstBaseline" id="Vdu-4i-jD2"/>
-                            <constraint firstAttribute="trailing" secondItem="3Iy-xN-JQh" secondAttribute="trailing" id="ZeL-MX-0sU"/>
-                            <constraint firstItem="ugU-jR-v6T" firstAttribute="top" secondItem="3Iy-xN-JQh" secondAttribute="bottom" constant="50" id="dpE-oF-GLJ"/>
-                            <constraint firstItem="8qC-Zq-XOc" firstAttribute="baseline" secondItem="ugU-jR-v6T" secondAttribute="firstBaseline" id="s17-H9-mei"/>
-                            <constraint firstItem="EVX-gp-Tka" firstAttribute="top" secondItem="ugU-jR-v6T" secondAttribute="bottom" constant="343" id="szK-0Y-fzc"/>
-                            <constraint firstItem="3Iy-xN-JQh" firstAttribute="leading" secondItem="Xfn-65-Rz0" secondAttribute="leading" id="wRL-yT-IuK"/>
+                            <constraint firstItem="8qC-Zq-XOc" firstAttribute="height" secondItem="ugU-jR-v6T" secondAttribute="height" id="3Wy-et-bCf"/>
+                            <constraint firstItem="8qC-Zq-XOc" firstAttribute="width" secondItem="ugU-jR-v6T" secondAttribute="width" id="Hlm-pD-IFy"/>
+                            <constraint firstItem="8qC-Zq-XOc" firstAttribute="leading" secondItem="ugU-jR-v6T" secondAttribute="trailing" constant="35" id="KQc-uK-OIZ"/>
+                            <constraint firstItem="ugU-jR-v6T" firstAttribute="baseline" secondItem="8qC-Zq-XOc" secondAttribute="baseline" id="UHe-GD-MbU"/>
+                            <constraint firstItem="3Iy-xN-JQh" firstAttribute="leading" secondItem="Xfn-65-Rz0" secondAttribute="leading" id="VFU-bI-CaK"/>
+                            <constraint firstAttribute="trailing" secondItem="3Iy-xN-JQh" secondAttribute="trailing" id="ViV-ee-nqd"/>
+                            <constraint firstItem="ugU-jR-v6T" firstAttribute="top" secondItem="3Iy-xN-JQh" secondAttribute="bottom" constant="47" id="esu-r0-sCy"/>
+                            <constraint firstItem="3Iy-xN-JQh" firstAttribute="top" secondItem="Th5-Ug-DrV" secondAttribute="bottom" constant="107" id="gRW-hj-tON"/>
+                            <constraint firstItem="ugU-jR-v6T" firstAttribute="leading" secondItem="Xfn-65-Rz0" secondAttribute="leadingMargin" constant="49" id="qpr-Sp-pgp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8qC-Zq-XOc" secondAttribute="trailing" constant="59" id="zfV-Hp-BFw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="startAndResetButton" destination="ugU-jR-v6T" id="msA-8d-I7e"/>
+                        <outlet property="stopButton" destination="8qC-Zq-XOc" id="D1b-ij-7xj"/>
                         <outlet property="timeLabel" destination="3Iy-xN-JQh" id="GC3-p8-b7J"/>
                     </connections>
                 </viewController>
